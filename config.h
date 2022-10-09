@@ -27,7 +27,7 @@ static const int pseudotransparency = 0;
 #if RELATIVEBORDER_PATCH
 /* borderperc: percentage of cell width to use as a border
  *             0 = no border, 100 = border width is same as cell width */
-int borderperc = 20;
+int borderperc = 0;
 #else
 static int borderpx = 2;
 #endif // RELATIVEBORDER_PATCH
