@@ -187,13 +187,13 @@ static uint forcemousemod = ShiftMask;
  */
 static MouseShortcut mshortcuts[] = {
 	/* mask                 button   function        argument       release  screen */
-	{ XK_ANY_MOD,           Button2, selpaste,       {.i = 0},      1 },
-	{ XK_ANY_MOD,            Button4, kscrollup,      {.i = 3},      0, S_PRI},
-	{ XK_ANY_MOD,            Button5, kscrolldown,    {.i = 3},      0, S_PRI},
-	{ XK_NO_MOD,            Button4, kscrollup,      {.i = 3},      0, S_PRI },
-	{ XK_NO_MOD,            Button5, kscrolldown,    {.i = 3},      0, S_PRI },
-	{ XK_ANY_MOD,           Button4, ttyScroll,	{.i = -3},	0,	S_ALT },
-	{ XK_ANY_MOD,           Button5, ttyScroll,	{.i = 3},	0,	S_ALT },
+	{ XK_ANY_MOD,			Button2,	selpaste,		{.i =  0},		1 },
+	{ XK_ANY_MOD,			Button4,	kscrollup,		{.i =  3},		0,	S_PRI },
+	{ XK_ANY_MOD,			Button5,	kscrolldown,	{.i =  3},		0,	S_PRI },
+	{ XK_NO_MOD,			Button4,	kscrollup,		{.i =  3},		0,	S_PRI },
+	{ XK_NO_MOD,			Button5,	kscrolldown,	{.i =  3},		0,	S_PRI },
+	{ XK_ANY_MOD,			Button4,	ttyScroll,		{.i = -3},		0,	S_ALT },
+	{ XK_ANY_MOD,			Button5,	ttyScroll,		{.i =  3},		0,	S_ALT },
 };
 
 /* Internal keyboard shortcuts. */
@@ -496,5 +496,3 @@ static char ascii_printable[] =
 	" !\"#$%&'()*+,-./0123456789:;<=>?"
 	"@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_"
 	"`abcdefghijklmnopqrstuvwxyz{|}~";
-
-
