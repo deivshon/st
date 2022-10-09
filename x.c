@@ -33,6 +33,8 @@ static void clippaste(const Arg *);
 static void numlock(const Arg *);
 static void selpaste(const Arg *);
 static void ttysend(const Arg *);
+static void ttyScrollUp(const Arg *arg);
+static void ttyScrollDown(const Arg *arg);
 static void zoom(const Arg *);
 static void zoomabs(const Arg *);
 static void zoomreset(const Arg *);
@@ -220,6 +222,20 @@ void
 ttysend(const Arg *arg)
 {
 	ttywrite(arg->s, strlen(arg->s), 1);
+}
+
+void
+ttyScrollUp(const Arg *arg) {
+	int n = arg->i;
+	char *upSeq = "\033OA";
+	for(int i = 0; i < n; i++) ttywrite(upSeq, strlen(upSeq), 1);
+}
+
+void
+ttyScrollDown(const Arg *arg) {
+	int n = arg->i;
+	char *downSeq = "\033OB";
+	for(int i = 0; i < n; i++) ttywrite(downSeq, strlen(downSeq), 1);
 }
 
 void

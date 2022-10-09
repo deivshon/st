@@ -192,8 +192,8 @@ static MouseShortcut mshortcuts[] = {
 	{ XK_ANY_MOD,            Button5, kscrolldown,    {.i = 3},      0, S_PRI},
 	{ XK_NO_MOD,            Button4, kscrollup,      {.i = 3},      0, S_PRI },
 	{ XK_NO_MOD,            Button5, kscrolldown,    {.i = 3},      0, S_PRI },
-	{ XK_ANY_MOD,           Button4, ttysend,        {.s = "\033OA"}, 0, S_ALT },
-	{ XK_ANY_MOD,           Button5, ttysend,        {.s = "\033OB"}, 0, S_ALT },
+	{ XK_ANY_MOD,           Button4, ttyScrollUp,	{.i = 3}, 0, S_ALT },
+	{ XK_ANY_MOD,           Button5, ttyScrollDown,	{.i = 3}, 0, S_ALT },
 };
 
 /* Internal keyboard shortcuts. */
